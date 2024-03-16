@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(
-          title: Text('login')),
+          title: Text('Login')),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,7 +48,7 @@ class _LoginState extends State<Login> {
             ),
             SizedBox(height: 30,),
             RichText(text: TextSpan(
-                text: 'REGISTRATION', recognizer: TapGestureRecognizer
+                text: 'Register Here', recognizer: TapGestureRecognizer
               ()..onTap = () =>
                   Navigator.push(context, MaterialPageRoute(
                       builder: (context) => const registration()))))
