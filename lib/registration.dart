@@ -14,10 +14,10 @@ class registration extends StatefulWidget {
 }
 
 class _registrationState extends State<registration> {
-  final TextEditingController _name = TextEditingController();
-  final TextEditingController _regno= TextEditingController();
-  final TextEditingController _username = TextEditingController();
-  final TextEditingController _password = TextEditingController();
+  final TextEditingController name = TextEditingController();
+  final TextEditingController rollno= TextEditingController();
+  final TextEditingController username = TextEditingController();
+  final TextEditingController password = TextEditingController();
 
   bool loading =false;
 
@@ -28,10 +28,10 @@ class _registrationState extends State<registration> {
           'Content-Type': 'application/json;charset=UTF-8',
         },
       body: jsonEncode({
-      'name':_name.text,
-      'dob':_regno.text,
-      'username':_username.text,
-      'password':_password.text,
+      'name':name.text,
+      'rollno':rollno.text,
+      'username':username.text,
+      'password':password.text,
       }));
     print(response.statusCode);
     print(response.body);
@@ -45,10 +45,10 @@ class _registrationState extends State<registration> {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(data["message"]),
       ));
     }
-    print(_name.text);
-    print(_regno.text);
-    print(_username.text);
-    print(_password.text);
+    print(name.text);
+    print(rollno.text);
+    print(username.text);
+    print(password.text);
   }
 
   @override
@@ -62,7 +62,7 @@ class _registrationState extends State<registration> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: TextField(controller:_name,decoration: InputDecoration(
+                child: TextField(controller:name,decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Full name',
                     hintText: 'Enter Fullname'
@@ -72,17 +72,17 @@ class _registrationState extends State<registration> {
                 height: 20,),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: TextField(controller:_regno,decoration: InputDecoration(
+                child: TextField(controller:rollno,decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Reg no.',
-                    hintText: 'Enter Reg no.'
+                    labelText: 'Roll no.',
+                    hintText: 'Enter Roll no.'
                 ),  ),
               ),
               SizedBox(
                 height: 20,),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: TextField(controller:_username,decoration: InputDecoration(
+                child: TextField(controller:username,decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Username',
                     hintText: 'Enter Username'
@@ -92,7 +92,7 @@ class _registrationState extends State<registration> {
                 height: 20,),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: TextField(controller:_password,decoration: InputDecoration(
+                child: TextField(controller:password,decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
                     hintText: 'Enter Password'
