@@ -62,7 +62,9 @@ class _registrationState extends State<registration> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: TextField(controller:name,decoration: InputDecoration(
+                child: TextField(
+                    controller:name,
+                    decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Full name',
                     hintText: 'Enter Fullname'
@@ -72,7 +74,9 @@ class _registrationState extends State<registration> {
                 height: 20,),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: TextField(controller:rollno,decoration: InputDecoration(
+                child: TextField(
+                    controller:rollno,
+                    decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Roll no.',
                     hintText: 'Enter Roll no.'
@@ -82,7 +86,9 @@ class _registrationState extends State<registration> {
                 height: 20,),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: TextField(controller:username,decoration: InputDecoration(
+                child: TextField(
+                    controller:username,
+                    decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Username',
                     hintText: 'Enter Username'
@@ -92,7 +98,9 @@ class _registrationState extends State<registration> {
                 height: 20,),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: TextField(controller:password,decoration: InputDecoration(
+                child: TextField(
+                    controller:password,
+                    decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
                     hintText: 'Enter Password'
@@ -100,8 +108,11 @@ class _registrationState extends State<registration> {
               ),
               SizedBox(
                 height: 20,),
-              TextButton(onPressed: registration, child: Text('Register',style: TextStyle(color: Colors.green),))
-          
+              TextButton(
+                  onPressed: registration,
+                  child: Text('Register',
+                    style:
+                    TextStyle(color: Colors.green),))
             ],),
       )
     );

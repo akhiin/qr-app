@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
                 controller: password,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'PASSWORD',
+                  labelText: 'Password',
                 ),),
             ),
             SizedBox(height: 30,),
@@ -77,11 +77,10 @@ class _LoginState extends State<Login> {
             ),
             SizedBox(height: 30,),
             RichText(text: TextSpan(
-                text: 'Register Here', recognizer: TapGestureRecognizer
-              ()
+                text: 'Register Here', recognizer: TapGestureRecognizer()
               ..onTap = () =>
                   Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => const registration()))))
+                      builder: (context) => const registration())))),
           ],
         ),
       ),
